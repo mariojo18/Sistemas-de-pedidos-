@@ -32,6 +32,14 @@ class InterfazUsuario:
         print("10. Buscar pedidos en rango")
         print("11. Mostrar estadísticas")
         print("12. Limpiar todo")
+        print("--- Red de Tiendas (Grafo) ---")
+        print("13. Conectar dos tiendas")
+        print("14. Eliminar ruta entre tiendas")
+        print("15. Eliminar tienda del grafo")
+        print("16. Buscar tienda en el grafo")
+        print("17. Ver ruta directa entre tiendas")
+        print("18. Ruta más corta entre tiendas")
+        print("19. Ver red completa de tiendas")
         print("0.  Salir")
         print("=" * 50)
 
@@ -132,6 +140,68 @@ class InterfazUsuario:
         else:
             print("Operación cancelada.")
 
+    # ── NUEVOS MÉTODOS — Grafo ─────────────────────────────────────────
+
+    def opcion_conectar_tiendas(self):
+        """Conecta dos tiendas con una ruta en el grafo."""
+        try:
+            id_a = int(input("ID tienda origen: "))
+            id_b = int(input("ID tienda destino: "))
+            resp = input("¿Ingresar peso manualmente? (s/n): ").strip().lower()
+            peso = float(input("Peso: ")) if resp == 's' else None
+            self.sistema.gestor_grafo.agregar_ruta(id_a, id_b, peso)
+        except ValueError:
+            print("Error: Entrada inválida.")
+
+    def opcion_eliminar_ruta(self):
+        """Elimina la ruta directa entre dos tiendas."""
+        try:
+            id_a = int(input("ID tienda origen: "))
+            id_b = int(input("ID tienda destino: "))
+            self.sistema.gestor_grafo.eliminar_ruta(id_a, id_b)
+        except ValueError:
+            print("Error: Entrada inválida.")
+
+    def opcion_eliminar_tienda_grafo(self):
+        """Elimina una tienda del grafo."""
+        try:
+            id_t = int(input("ID tienda: "))
+            self.sistema.gestor_grafo.eliminar_tienda(id_t)
+        except ValueError:
+            print("Error: Entrada inválida.")
+
+    def opcion_buscar_tienda_grafo(self):
+        """Busca una tienda en el grafo."""
+        try:
+            id_t = int(input("ID tienda: "))
+            self.sistema.gestor_grafo.buscar_tienda(id_t)
+        except ValueError:
+            print("Error: Entrada inválida.")
+
+    def opcion_ruta_directa(self):
+        """Consulta si hay ruta directa entre dos tiendas."""
+        try:
+            id_a = int(input("ID tienda origen: "))
+            id_b = int(input("ID tienda destino: "))
+            self.sistema.gestor_grafo.buscar_ruta(id_a, id_b)
+        except ValueError:
+            print("Error: Entrada inválida.")
+
+    def opcion_ruta_mas_corta(self):
+        """Calcula la ruta más corta (Dijkstra) entre dos tiendas."""
+        try:
+            id_a = int(input("ID tienda origen: "))
+            id_b = int(input("ID tienda destino: "))
+            self.sistema.gestor_grafo.ruta_mas_corta(id_a, id_b)
+        except ValueError:
+            print("Error: Entrada inválida.")
+
+    def opcion_mostrar_grafo(self):
+        """Muestra la red completa de tiendas."""
+        self.sistema.gestor_grafo.mostrar_grafo()
+
+    # ── BUCLE PRINCIPAL ───────────────────────────────────────────────
+
     def ejecutar(self):
         """Ejecuta el bucle principal de la interfaz."""
         while True:
@@ -162,6 +232,20 @@ class InterfazUsuario:
                 self.opcion_estadisticas()
             elif opcion == "12":
                 self.opcion_limpiar_todo()
+            elif opcion == "13":
+                self.opcion_conectar_tiendas()
+            elif opcion == "14":
+                self.opcion_eliminar_ruta()
+            elif opcion == "15":
+                self.opcion_eliminar_tienda_grafo()
+            elif opcion == "16":
+                self.opcion_buscar_tienda_grafo()
+            elif opcion == "17":
+                self.opcion_ruta_directa()
+            elif opcion == "18":
+                self.opcion_ruta_mas_corta()
+            elif opcion == "19":
+                self.opcion_mostrar_grafo()
             elif opcion == "0":
                 print("¡Hasta luego!")
                 break
