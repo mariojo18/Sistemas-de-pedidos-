@@ -117,7 +117,3 @@ Programación Orientada a Objetos
 Grafos Ponderados  
 
 ---
-
-# Repositorio del Proyecto
-
-https://github.com/arrietaelias70-stack/SISTEMAS_DE_PEDIDOS
