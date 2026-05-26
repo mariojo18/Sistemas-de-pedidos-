@@ -1,7 +1,6 @@
-# 🎯 Sistema de Gestión de Pedidos
+#  Sistema de Gestión de Pedidos
 
 
-## 📦 Archivos Entregados (12 archivos Python + 4 documentos)
 
 ### **MÓDULOS PRINCIPALES** (8 archivos .py)
 
@@ -22,12 +21,10 @@
 |---------|-------------|
 | `ejemplo_uso.py` | 5 ejemplos funcionales completos |
 | `DOCUMENTACION.md` | Documentación técnica completa |
-| `ESTRUCTURA_MODULAR.txt` | Guía de estructura y relaciones |
-| `DIAGRAMA_UML.txt` | Diagramas UML de clases |
 
 ---
 
-## 🚀 Cómo Usar
+##  Cómo Usar
 
 ### **Opción 1: Interfaz Interactiva**
 ```bash
@@ -55,7 +52,7 @@ print(stats)
 
 ---
 
-## 📊 Estructura de Módulos
+##  Estructura de Módulos
 
 ```
 CAPA DE PRESENTACIÓN
@@ -79,7 +76,7 @@ CAPA DE MODELOS
 
 ---
 
-## 💡 Ventajas Principales
+##  Ventajas Principales
 
 ### 1️⃣ **Separación de Responsabilidades**
 - Cada clase tiene UNA razón para cambiar
@@ -110,8 +107,7 @@ class TestGestorTiendas(unittest.TestCase):
 
 ---
 
-## 📚 Documentación Incluida
-
+## Documentación Incluida
 ### DOCUMENTACION.md
 - Descripción de cada módulo
 - Métodos principales de cada clase
@@ -154,7 +150,7 @@ class TestGestorTiendas(unittest.TestCase):
 
 ---
 
-## 🔧 Funcionalidades Disponibles
+## Funcionalidades Disponibles
 
 ### Gestión de Tiendas
 - Agregar tienda
