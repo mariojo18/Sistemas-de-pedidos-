@@ -351,7 +351,7 @@ print(sistema.obtener_estadisticas())
 
 ---
 
-## 🛠️ Extensiones Futuras
+##  Extensiones Futuras
 
 ### Posibles Mejoras
 
@@ -386,31 +386,10 @@ print(sistema.obtener_estadisticas())
 - Gabriel Alejandro Zambrano Herazo – 2250944
 - Daniel Esteban Romero Dueñes – 2250948
 
-**Versión Modularizada:** Refactorización para mejorar mantenibilidad y escalabilidad
+---
+
 
 ---
 
-## 📜 Licencia
-
-Proyecto académico - Universidad de Santander (UDES)
 
 ---
-
-## 🤝 Contribuciones
-
-Para contribuir al proyecto:
-1. Fork del repositorio
-2. Crear rama para nueva feature
-3. Commit de cambios
-4. Push a la rama
-5. Abrir Pull Request
-
----
-
-## 📞 Soporte
-
-Para preguntas o problemas, consultar la documentación en docstrings de cada módulo.
-
----
-
-**Última actualización:** 2025
