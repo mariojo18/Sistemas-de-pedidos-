@@ -5,7 +5,6 @@ Ejemplos de cómo usar el sistema de gestión de pedidos
 
 from sistema_pedidos import SistemaPedidos
 
-
 def ejemplo_basico():
     """Ejemplo básico del uso del sistema."""
     print("=" * 60)
